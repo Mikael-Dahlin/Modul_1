@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Uppgift 1
+      // deklarera 3 variabler med var, let och const
+      var number = 4;
+      const name = "John";
+      let fruits = ["apple", "mango", "orange"];
+
+      // Uppgift 2
+      // deklarera 5 variabler med let av typerna: Boolean, Number, String, Object och Array
+      let myBoolean = false;
+      let myNumber = 6;
+      let myString = "flower";
+      let myObject = { number: 3, name: "tre" };
+      let myArray = [3, 6, 8, 2, 5];
+
+      // Uppgift 3
+      // Definiera en funktion som returnerar summan av två värden. värdena ska vara parametrar i funktionen.
+      function summera(tal1, tal2) {
+        return tal1 + tal2;
+      }
+      // Exekvera funktionen med valfria argument, det returnerade värdet från funktionen ovan ska sparas i en ny variabel kallad 'sum'.
+      let sum = summera(5, 9);
+      // Logga ut i konsolen: "Summan blir: xxx", där xxx är värdet av variabeln 'sum'.
+      console.log("Summan blir: " + sum);
+
+      // Uppgift 4
+      // Logga ut nuvarande datum och tid.
+      console.log(Date());
+
+      // Uppgift 5
+      // Deklarera ett objekt som innehåller 3 properties och en metod som loggar de 3 egenskaperna i konsolen.
+      let pet = {
+        name: "Nala",
+        species: "cat",
+        age: 4,
+        petInfo() {
+          console.log(
+            "name: " +
+              this.name +
+              "\n" +
+              "species: " +
+              this.species +
+              "\n" +
+              "age: " +
+              this.age
+          );
+        },
+      };
+      pet.petInfo();
+
+      // Uppgift 6
+      // Definiera en array som innehåller värdena 4, 8, 15, 16, 23 och 42 och logga ut den i konsolen.
+      let array = [4, 8, 15, 16, 23, 42];
+      console.log(array);
+      // Logga ut i konsolen det sista värdet i arrayen.
+      console.log("Last number in the array: ", array[array.length - 1]);
+
+      // Filtrera arrayen så att du får en ny array med endast värden lägre än 20.
+      let filteredArray = array.filter((number) => number < 20);
+      /* alternativt med lessThen20 funktion:
+      function lessThen20(number) {
+        return number < 20;
+      }
+      let filteredArray = array.filter(lessThen20); */
+
+      // På resultatet av föregånde operation, använd 'map' för att dubblera alla värden.
+      let mappedArray = filteredArray.map((number) => number * 2);
+      /* alternativt med times2 funktion:
+      function times2(number) {
+        return number * 2;
+      }
+      let mappedArray = filteredArray.map(times2); */
+
+      // På resultatet av föregånde operation, använd 'forEach' för att logga ut alla värden vad för sig.
+      mappedArray.forEach((number) => console.log(number));
+      /* alternativt med log funktion:
+      function log(number) {
+        console.log(number);
+      }
+      mappedArray.forEach(log); */
+
+      // Uppgift 7
+      // Gör en 'while'-loop som loopar 6 gånger, ("Loop 1", "Loop 2", "Loop 3", "Almost done...", "Almost done...", "Almost done...") efter loopen logga ut "Done!"
+      let i = 0;
+      while (i < 6) {
+        i++;
+        if (i < 4) {
+          console.log("Loop " + i);
+        } else {
+          console.log("Almost done...");
+        }
+      }
+      console.log("Done!");
+      //Slut av uppgift
+    </script>
+  </body>
+</html>
